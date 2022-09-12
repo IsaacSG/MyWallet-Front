@@ -16,7 +16,7 @@ export default function SignIn() {
 
     function Sign() {
         const body = {email, password};
-        const promisse = axios.post(`${BaseAPI}/sign-in`, body);
+        const promisse = axios.post(`${BaseAPI}/signIn`, body);
         promisse.then(res => {
             setUser({token: res.data.token, name: res.data.name});
             redirect("/home");
@@ -35,7 +35,7 @@ export default function SignIn() {
             <button onClick = {Sign} >
                 <p>Entrar</p>
             </button>
-            <Link to = {"/sign-up"} style={{ textDecoration: 'none', color: '#FFFFFF', marginBottom: '103px' }} > Primeira vez? Cadastre-se!</Link>
+            <Link to = {"/signUp"} style={{ textDecoration: 'none', color: '#FFFFFF', marginBottom: '103px' }} > Primeira vez? Cadastre-se!</Link>
         </Menu>
     );
 }

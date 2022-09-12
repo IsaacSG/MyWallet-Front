@@ -16,7 +16,7 @@ export default function SignUp() {
 
     function Signup() {
         const body = {name, email, password, confirmpassword};
-        const promisse = axios.post(`${BaseAPI}/sign-up`, body);
+        const promisse = axios.post(`${BaseAPI}/signUp`, body);
         promisse.then(res => {
             redirect("/");
             console.log(body)
